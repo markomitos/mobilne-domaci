@@ -1,5 +1,6 @@
 package com.example.bookingapptim.fragments;
 
+import android.content.Context;
 import android.os.Bundle;
 
 import androidx.annotation.NonNull;
@@ -32,8 +33,8 @@ public class FragmentAccommodationList extends ListFragment {
     private ArrayList<Accommodation> accommodations;
     private FragmentMainBinding binding;
 
-    public static MainScreen newInstance(ArrayList<Accommodation> amenities){
-        MainScreen fragment = new MainScreen();
+    public static FragmentAccommodationList newInstance(ArrayList<Accommodation> amenities){
+        FragmentAccommodationList fragment = new FragmentAccommodationList();
         Bundle args = new Bundle();
         args.putParcelableArrayList(ARG_PARAM, amenities);
         fragment.setArguments(args);

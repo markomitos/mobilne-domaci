@@ -6,7 +6,7 @@
     tools:context=".fragments.FragmentAccommodationList">
 
     <ListView
-        android:id="@+id/accommodation_list"
+        android:id="@android:id/list"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         tools:listitem="@layout/accomodation_card"/>

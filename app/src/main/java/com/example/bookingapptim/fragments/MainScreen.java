@@ -20,6 +20,7 @@ import android.widget.Button;
 import android.widget.Spinner;
 import android.widget.TextView;
 
+import com.example.bookingapptim.HomeScreen;
 import com.example.bookingapptim.R;
 import com.example.bookingapptim.databinding.FragmentMainBinding;
 import com.example.bookingapptim.models.Accommodation;
@@ -99,8 +100,7 @@ public class MainScreen extends Fragment {
             }
         });
 
-
-        FragmentTransition.to(FragmentAccommodationList.newInstance(accommodations), getActivity(), false, R.id.scroll_accommodations_list);
+        //FragmentTransition.to(FragmentAccommodationList.newInstance(accommodations), getActivity(), false, R.id.scroll_accommodations_list);
 
         return root;
     }
