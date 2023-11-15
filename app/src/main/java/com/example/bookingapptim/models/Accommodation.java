@@ -24,7 +24,7 @@ public class Accommodation implements Parcelable {
         Name = in.readString();
         Description = in.readString();
         Address = in.readString();
-        Price = in.readInt();
+        Price =Integer.getInteger(in.readString()) ;
     }
 
     public String getName() {
@@ -51,12 +51,12 @@ public class Accommodation implements Parcelable {
         Address = address;
     }
 
-    public int getPrice() {
-        return Price;
+    public String getPrice() {
+        return Integer.toString(Price);
     }
 
-    public void setPrice(int price) {
-        Price = price;
+    public void setPrice(String price) {
+        Price = Integer.getInteger(price);
     }
 
     public static final Creator<Accommodation> CREATOR = new Creator<Accommodation>() {
@@ -81,6 +81,6 @@ public class Accommodation implements Parcelable {
         dest.writeString(Name);
         dest.writeString(Description);
         dest.writeString(Address);
-        dest.writeInt(Price);
+        dest.writeString(Integer.toString(Price));
     }
 }

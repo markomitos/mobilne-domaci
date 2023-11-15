@@ -16,6 +16,7 @@ import android.widget.ListView;
 
 import com.example.bookingapptim.R;
 import com.example.bookingapptim.adapter.AccommodationListAdapter;
+import com.example.bookingapptim.databinding.FragmentAccommodationListBinding;
 import com.example.bookingapptim.databinding.FragmentMainBinding;
 import com.example.bookingapptim.models.Accommodation;
 
@@ -31,7 +32,7 @@ public class FragmentAccommodationList extends ListFragment {
     private AccommodationListAdapter adapter;
     private static final String ARG_PARAM = "param";
     private ArrayList<Accommodation> accommodations;
-    private FragmentMainBinding binding;
+    private FragmentAccommodationListBinding binding;
 
     public static FragmentAccommodationList newInstance(ArrayList<Accommodation> amenities){
         FragmentAccommodationList fragment = new FragmentAccommodationList();
@@ -45,7 +46,7 @@ public class FragmentAccommodationList extends ListFragment {
     @Override
     public View onCreateView(@NonNull LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
         Log.i("BookingBaboon", "onCreateView Amenities List Fragment");
-        binding = FragmentMainBinding.inflate(inflater, container, false);
+        binding = FragmentAccommodationListBinding.inflate(inflater, container, false);
         View root = binding.getRoot();
         return root;
     }

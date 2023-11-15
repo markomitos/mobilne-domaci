@@ -100,7 +100,7 @@ public class MainScreen extends Fragment {
             }
         });
 
-        //FragmentTransition.to(FragmentAccommodationList.newInstance(accommodations), getActivity(), false, R.id.scroll_accommodations_list);
+        FragmentTransition.to(FragmentAccommodationList.newInstance(accommodations), getActivity(), false, R.id.scroll_accommodations_list);
 
         return root;
     }
